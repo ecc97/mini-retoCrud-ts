@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Users</title>
+  <link rel="stylesheet" href="../styles/create.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/dist/index.html">Inicio</a></li>
+        <li><a href="/dist/pages/create.html">Crear</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Users</h1>
+  <form action="">
+    <div class="input-container">
+      <label for="id">Documento</label>
+      <input type="number" id="id">
+    </div>
+
+    <div class="input-container">
+      <label for="name">Nombre</label>
+      <input type="text" id="name">
+    </div>
+
+    <div class="input-container">
+      <label for="email">Correo</label>
+      <input type="email" id="email">
+    </div>
+
+    <div class="input-container">
+      <label for="avatar">Avatar</label>
+      <input type="url" id="avatar">
+    </div>
+
+    <button type="submit" class="button-form">Enviar</button>
+  </form>
+  <script type="module" src="../create.js"></script>
+</body>
+
+</html>
