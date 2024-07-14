@@ -24,7 +24,8 @@ export class ListTemplate {
         deleteBtn.textContent = 'Delete'
 
         updateBtn.addEventListener('click', () => {
-            window.location.href = `./pages/create.html?id=${user.id}`
+            localStorage.setItem('userId', user.id);
+            window.location.href = `./pages/create.html`
         })
 
         deleteBtn.addEventListener('click', async () => {

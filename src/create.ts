@@ -77,10 +77,10 @@ async function foundID(userId: string){
 }
 
 function listUserToUpdate(): void {
-    const params = new URLSearchParams(window.location.search);
-    const userId = params.get('id');
+    const userId = localStorage.getItem('userId');
     if (userId) {
         foundID(userId);
+        localStorage.removeItem('userId');
     }
 }
 

@@ -76,10 +76,10 @@ function foundID(userId) {
     });
 }
 function listUserToUpdate() {
-    const params = new URLSearchParams(window.location.search);
-    const userId = params.get('id');
+    const userId = localStorage.getItem('userId');
     if (userId) {
         foundID(userId);
+        localStorage.removeItem('userId');
     }
 }
 listUserToUpdate();

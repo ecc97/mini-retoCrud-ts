@@ -26,7 +26,8 @@ export class ListTemplate {
         updateBtn.textContent = 'Update';
         deleteBtn.textContent = 'Delete';
         updateBtn.addEventListener('click', () => {
-            window.location.href = `./pages/create.html?id=${user.id}`;
+            localStorage.setItem('userId', user.id);
+            window.location.href = `./pages/create.html`;
         });
         deleteBtn.addEventListener('click', () => __awaiter(this, void 0, void 0, function* () {
             const userManager = new UserManager();
