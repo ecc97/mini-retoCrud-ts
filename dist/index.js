@@ -7,19 +7,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import { UserManager } from './classes/userManager.js';
 import { ListTemplate } from './classes/listTemplate.js';
 const div = document.querySelector('.item-list');
 document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield getAllUsers();
+    const userManager = new UserManager(); // Initialize the UserManager class
+    const data = yield userManager.getAllUsers();
     const list = new ListTemplate(div);
     data.map((user) => {
         list.render(user);
     });
 }));
-function getAllUsers() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch("http://localhost:3000/users");
-        const data = yield response.json();
-        return data;
-    });
-}
+// async function getAllUsers(): Promise<IResponse[]> {
+//     const response = await fetch("http://localhost:3000/users")
+//     const data = await response.json()
+//     return data  
+// }
